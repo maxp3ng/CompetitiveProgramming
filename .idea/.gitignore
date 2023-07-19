@@ -1,0 +1,36 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+
+# CLion
+.idea/
+
+# IntelliJ
+*.iml
+.idea/
+out/
+target/
+
+# Compiled files
+*.class
+*.jar
+
+# Build directories
+bin/
+build/
+out/
+
+# Dependency directories
+lib/
+node_modules/
+vendor/
+
+# Other
+.DS_Store
+Thumbs.db
