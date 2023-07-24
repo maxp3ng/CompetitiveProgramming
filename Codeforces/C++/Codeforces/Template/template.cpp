@@ -10,6 +10,7 @@ const ll MXN = 2e5 + 10;
 using str = string;
 using db = long double;
 using vll = vector<ll>;
+using vi = vector<int>;
 using pii = pair<int, int>;
 
 #define endl "\n";
@@ -20,7 +21,7 @@ using pii = pair<int, int>;
 
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
-#define vOut(v) Rep(i,0,v.size()){Out(v[i]);}
+#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
 #define Out(s)  cout << s << '\n';
 
 void solve(){

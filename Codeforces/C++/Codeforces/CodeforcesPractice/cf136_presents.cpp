@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/151/A
-// solved 7/23/23
-// comments: min
+// https://codeforces.com/problemset/problem/136/A
+//  solved 7/24/23
+// comments:
 
 #include <bits/stdc++.h>
 
@@ -10,6 +10,7 @@ const ll MXN = 2e5 + 10;
 using str = string;
 using db = long double;
 using vll = vector<ll>;
+using vi = vector<int>;
 using pii = pair<int, int>;
 
 #define endl "\n";
@@ -24,12 +25,21 @@ using pii = pair<int, int>;
 #define Out(s)  cout << s << '\n';
 
 void solve(){
-    ll n, k, l, c, d, p, nl, np;
-    cin >> n >> k >> l >> c >> d >> p >> nl >> np;
-
-    cout << min({k*l/nl, c*d, p/np})/n << endl;
-
-
+    ll n, m;
+    cin >> n;
+    vi v(n,0);
+    for (int i=0; i<n; i++){
+        int in;
+        cin >> in;
+        v[i] = in;
+    }
+    vi ret(n,0);
+    for (int i=0; i<n; i++){
+        int nm = v[i];
+        nm = v[nm-1];
+        ret[nm-1] = v[i];
+    }
+   vOut(ret) ;
 }
 
 int main(){

@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/144/A
+// https://codeforces.com/problemset/problem/141/A
 //  solved 7/24/23
-// comments: work on speed
+// comments: speed
 
 #include <bits/stdc++.h>
 
@@ -26,33 +26,28 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
-    cin >> n;
+    str s1,s2,s3;
+    cin >> s1;
+    cin >> s2;
+    cin >> s3;
 
-    vi v(n,0) ;
-    Rep(i,0,n){
-        int in;
-        cin >> in;
-        v[i] = in;
-    }
-
-    int max = INT_MIN;
-    int maxIndex = 0;
-    for(int i=0; i<n; i++){
-       if  (v[i] > max){
-           maxIndex = i;
-           max = v[i];
-       }
-    }
-    int min = INT_MAX;
-    int minIndex = 0;
-    for(int i=n-1; i>=0; i--){
-        if  (v[i] < min){
-            minIndex = i;
-            min = v[i];
+    s1 += s2;
+    if (s1.size() != s3.size()){Out("NO"); return;}
+    for (int i=0; i<s1.size(); i++){
+        bool match = false;
+        for (int j=0; j<s3.size(); j++) {
+            if (s1[i] == s3[j]) {
+                match = true;
+                s3[j] = '.';
+                break;
+            }
+        }
+        if (!match){
+            Out("NO");
+            return;
         }
     }
-    int ret = maxIndex > minIndex ?maxIndex + (n-(minIndex+1))-1 : maxIndex + (n-(minIndex+1));
-    Out(ret);
+    Out("YES");
 }
 
 int main(){
