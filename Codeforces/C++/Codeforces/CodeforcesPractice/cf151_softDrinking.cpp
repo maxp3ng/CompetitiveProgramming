@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/151/A
+// solved 7/23/23
+// comments: min
 
 #include <bits/stdc++.h>
 
@@ -24,7 +24,10 @@ using pii = pair<int, int>;
 #define Out(s)  cout << s << '\n';
 
 void solve(){
-    ll n, m;
+    ll n, k, l, c, d, p, nl, np;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np;
+
+    cout << min({k*l/nl, c*d, p/np})/n << endl;
 
 
 }
@@ -32,10 +35,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

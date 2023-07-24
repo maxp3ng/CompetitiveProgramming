@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/158/A
+//  solved 7/23/23
+// comments: don't use Rep acc for loop is fine but i'll keep Rep for a bit
 
 #include <bits/stdc++.h>
 
@@ -24,18 +24,35 @@ using pii = pair<int, int>;
 #define Out(s)  cout << s << '\n';
 
 void solve(){
-    ll n, m;
+    int n, k;
+    cin >> n;
+    cin >> k;
 
+    int ret = 0;
+    int target = INT_MIN;
+    for (int i = 1; i<=n; i++){
+        int in;
+        cin >> in;
+        if (in < target || in <= 0) {
+            break;
+        }
+        if (i == k){
+            target = in;
+        }
+
+        ret++;
+    }
+    Out(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

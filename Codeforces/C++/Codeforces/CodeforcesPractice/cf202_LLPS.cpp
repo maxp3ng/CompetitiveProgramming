@@ -1,6 +1,6 @@
-//
+// https://codeforces.com/problemset/problem/202/A
 // unsolved
-// comments:
+// comments: return to
 
 #include <bits/stdc++.h>
 
@@ -10,7 +10,7 @@ const ll MXN = 2e5 + 10;
 using str = string;
 using db = long double;
 using vll = vector<ll>;
-using pii = pair<int, int>;
+using pi = pair<int, int>;
 
 #define endl "\n";
 #define F first
@@ -25,6 +25,9 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+//    ll N; cin >> N; Rep(i, 0, N)
+
+
 
 
 }

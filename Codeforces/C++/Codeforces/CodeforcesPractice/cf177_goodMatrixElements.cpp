@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/177/A1
+//  solved 7/23/23
+// comments: speedrunning -> get a better app than ms.paint
 
 #include <bits/stdc++.h>
 
@@ -25,6 +25,20 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+
+    int sum = 0;
+    Rep(i, 0, n){
+        Rep(j,0,n){
+            int in;
+            cin >> in;
+            if (i==j || i+j == n-1 || i == (n-1)/2 || j == (n-1)/2){
+                sum += in;
+            }
+        }
+    }
+    Out(sum);
+
 
 
 }
@@ -32,10 +46,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

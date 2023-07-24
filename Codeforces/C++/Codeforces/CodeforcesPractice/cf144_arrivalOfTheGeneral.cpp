@@ -1,4 +1,4 @@
-//
+// https://codeforces.com/problemset/problem/144/A
 // unsolved
 // comments:
 
@@ -25,6 +25,7 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin << n;
 
 
 }

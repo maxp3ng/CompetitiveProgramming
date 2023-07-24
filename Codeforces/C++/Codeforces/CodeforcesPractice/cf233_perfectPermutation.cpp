@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/233/A
+//  solved 7/23/23
+// comments: read the problem statement closely -> spending 5 mins more reading is better than spending 15 rewriting
 
 #include <bits/stdc++.h>
 
@@ -10,7 +10,7 @@ const ll MXN = 2e5 + 10;
 using str = string;
 using db = long double;
 using vll = vector<ll>;
-using pii = pair<int, int>;
+using pi = pair<int, int>;
 
 #define endl "\n";
 #define F first
@@ -24,7 +24,18 @@ using pii = pair<int, int>;
 #define Out(s)  cout << s << '\n';
 
 void solve(){
-    ll n, m;
+    ll N; cin >> N;
+    if (N%2 == 1) { Out(-1); return; }
+    cout << 2;
+    Rep(i, 2, N+1){
+        if (i%2==0){
+            cout << " " << i-1;
+        }
+        else {
+            cout << " " << i+1;
+        }
+    }
+    cout << endl;
 
 
 }
@@ -32,10 +43,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

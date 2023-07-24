@@ -1,6 +1,6 @@
-//
+// https://codeforces.com/problemset/problem/155/A
 // unsolved
-// comments:
+// comments: spend less time debugging -> practice more
 
 #include <bits/stdc++.h>
 
@@ -24,18 +24,33 @@ using pii = pair<int, int>;
 #define Out(s)  cout << s << '\n';
 
 void solve(){
-    ll n, m;
+    ll n;
+    cin >> n;
+    int first ;
+    cin >> first;
+    int max = first;
+    int min = first;
 
+    int ret = 0;
+    for (int i=1; i<n; i++){
+        int in;
+        cin >> in;
+
+       if (in < min) { min = in; ret++; continue;}
+        if (in > max) { max = in; ret++;}
+
+    }
+    Out(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }
