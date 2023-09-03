@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/49/A
+// solved 7/28/23
+// comments: getline
 
 #include <bits/stdc++.h>
 
@@ -26,19 +26,26 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    str s;
+    getline(cin, s);
 
-
+    str vowels = "AEIOUYaeiouy";
+    str consonants = "BCDFGHJKLMNPQRSTVWXYbcdfghjklmnpqrstvwxyz";
+    
+    for (int i=s.size()-1; i>=0; i--){
+      if (vowels.find(s[i])!= str::npos){Out("YES"); return;}
+      if (consonants.find(s[i])!= str::npos){Out("NO"); return;}
+    }
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+    //ll T = 1; cin >> T;
+    //while(T --){
         solve();
-    }
+    //}
 
     return 0;
 }
-
 

@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/50/A
+// solved 7/28/23 
+// comments: 
 
 #include <bits/stdc++.h>
 
@@ -26,19 +26,18 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
-
-
+    cin >> n >> m;
+    cout << ((int)floor(n*m/2.0)) << endl;
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+    //ll T = 1; cin >> T;
+    //while(T --){
         solve();
-    }
+    //}
 
     return 0;
 }
-
 

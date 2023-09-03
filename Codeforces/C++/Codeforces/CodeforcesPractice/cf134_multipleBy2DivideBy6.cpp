@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/1374/B
+// solved 7/3/23
+// comments: solved > elegant solution
 
 #include <bits/stdc++.h>
 
@@ -26,7 +26,36 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+  
+    cin >> n;
+    
 
+    ll two = 0;
+    ll three = 0;
+
+    while (n != 1){
+      if (n < 1){
+        Out("-1");
+        return;
+      }
+      if (n%2 == 0){
+        two++;
+        n /= 2;
+      } else if (n%3 == 0){
+        three++;
+        n /= 3;
+      } else {
+        Out("-1");
+        return;
+      }
+    }
+
+    if (two > three){
+      Out("-1");
+      return;
+    }
+    
+    Out((three - two) + three);
 
 }
 
@@ -40,5 +69,4 @@ int main(){
 
     return 0;
 }
-
 
