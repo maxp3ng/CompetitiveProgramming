@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/1325/B
+// solved 7/30/23
+// comments: there's usually a trick to it
 
 #include <bits/stdc++.h>
 
@@ -22,14 +22,25 @@ using pii = pair<int, int>;
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
 #define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
-#define Out(s)  cout << (s) << '\n'
-#define OutRet(s)  cout << (s) << '\n'; return
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
 #define ts(n) to_string(n)
 
 void solve(){
     ll n, m;
+    cin >> n;
 
+    set<ll> s;
 
+    for (int i=0; i<n; i++){
+       ll in;
+       cin >>in;
+       if (s.find(in) == s.end()){
+           s.insert(in);
+       }
+    }
+
+    Out(s.size());
 }
 
 int main(){

@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/731/A
+// solved 10/28/23
+// comments: think it through -> it's good to pause and look at the problem through a wider lens
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,27 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
-
-
+    str s;
+    cin >> s;
+    ll ret = 0;
+    ll last = 0;
+    for (int i=0; i<s.size(); i++){
+       ll curr = s[i] - 'a';
+        ll mn = min (last, curr);
+        ll mx = max(last, curr);
+        ret += min (abs(mx-mn), abs(26-mx+mn));
+        last = curr;
+    }
+    Out(ret);
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

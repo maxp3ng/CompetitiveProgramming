@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// http://www.usaco.org/index.php?page=viewproblem2&cpid=1323
+// unsolved
+// comments:
 
 #include <bits/stdc++.h>
 
@@ -21,8 +21,10 @@ using pii = pair<int, int>;
 
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
-#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
-#define Out(s)  cout << s << '\n';
+#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
+#define ts(n) to_string(n)
 
 void solve(){
     ll n, m;
@@ -30,20 +32,17 @@ void solve(){
     str s;
     cin >> s;
 
-    int nm = 0;
-    int ret = 0;
-    for (int i=0; i<n; i++){
-        if (s[i] == '('){
-            nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
-            }
+    char prev = s[0];
+    for (int i=1; i<n; i++){
+        if (s[i] == 'F'){
+
+        } else if (s[i] == prev){
+
+        } else {
+
         }
+        prev = s[i];
     }
-    Out(ret);
 
 }
 

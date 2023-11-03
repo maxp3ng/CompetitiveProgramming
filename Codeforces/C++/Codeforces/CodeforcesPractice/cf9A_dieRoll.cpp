@@ -1,5 +1,5 @@
-//
-// unsolved
+// https://codeforces.com/problemset/status?my=on
+//  solved 10/19/23
 // comments:
 
 #include <bits/stdc++.h>
@@ -28,17 +28,31 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
-
-
+    cin >> n >> m;
+    n = max(n,m)     ;
+    int ret = 7-n;
+    if (ret == 2){
+        OutRet("1/3");
+    }
+    if (ret == 3){
+        OutRet("1/2");
+    }
+    if (ret == 4){
+        OutRet("2/3");
+    }
+    if (ret == 6){
+        OutRet("1/1");
+    }
+    Out(to_string(ret) + "/6");
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

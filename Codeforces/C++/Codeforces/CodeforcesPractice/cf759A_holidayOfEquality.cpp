@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/758/A
+// solved 10/21
+// comments: i love enya chen
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,27 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
 
+    ll sum = 0;
+    ll mn= -1;
+    for (int i=0; i<n; i++){
+        ll t;
+        cin >> t;
+        sum += t;
+        mn = max(mn,t);
+    }
 
+    Out((mn*n)-sum);
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
-        solve();
-    }
+//    ll T = 1; cin >> T;
+//    while(T --){
+    solve();
+//    }
 
     return 0;
 }

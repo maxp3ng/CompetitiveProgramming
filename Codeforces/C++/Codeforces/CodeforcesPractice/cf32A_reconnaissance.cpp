@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/32/A
+// solved 10/19/23
+// comments: good time at last
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,33 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
-
+    cin >> n >> m;
+    vll v(n,0);
+    for (int i=0; i<n; i++){
+        ll t;
+        cin >> t;
+        v[i] = t;
+    }
+    ll ret;
+    for (int i=0; i<n-1; i++){
+        int a = v[i];
+        for (int j=i+1; j<n; j++){
+            if (abs(v[i] - v[j]) <= m){
+                ret += 2;
+            }
+        }
+    }
+    Out(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

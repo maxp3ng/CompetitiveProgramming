@@ -1,5 +1,5 @@
-//
-// unsolved
+// https://codeforces.com/problemset/problem/734/A
+// solved 10/23/23
 // comments:
 
 #include <bits/stdc++.h>
@@ -28,6 +28,20 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    str s;
+    cin >> s;
+    ll a, b;
+
+    for (int i=0; i<n; i++){
+        if (s[i] == 'A'){
+            a++;
+        } else {
+            b++;
+        }
+    }
+    if (a == b ){ OutRet("Friendship");}
+    OutRet((a>b) ? "Anton" : "Danik");
 
 
 }
@@ -35,10 +49,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

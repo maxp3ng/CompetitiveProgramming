@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// https://codeforces.com/problemset/problem/119/A
+// unsolved
+// comments: OutRet fun + learn bool
 
 #include <bits/stdc++.h>
 
@@ -23,37 +23,34 @@ using pii = pair<int, int>;
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
 #define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
 #define Out(s)  cout << s << '\n';
+#define OutRet(s)  cout << s << '\n'; return;
 
 void solve(){
-    ll n, m;
-    cin >> n;
-    str s;
-    cin >> s;
+    ll a,b,n;
+    cin >> a >> b >> n;
+    if (!a) {OutRet(0);}
+    if (!b) {OutRet(1);}
 
-    int nm = 0;
-    int ret = 0;
-    for (int i=0; i<n; i++){
-        if (s[i] == '('){
-            nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
-            }
-        }
+    bool moveA = true;
+    while (n > 0){
+       if (moveA) {
+          n -= gcd(a,n) ;
+       } else {
+           n -= gcd(b,n);
+       }
+       moveA = !moveA;
     }
+    int ret = moveA;
     Out(ret);
-
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

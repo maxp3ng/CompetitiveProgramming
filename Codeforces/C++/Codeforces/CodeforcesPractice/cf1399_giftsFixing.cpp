@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// https://codeforces.com/problemset/problem/1399/B
+// unsolved
+// comments:
 
 #include <bits/stdc++.h>
 
@@ -21,29 +21,42 @@ using pii = pair<int, int>;
 
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
-#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
-#define Out(s)  cout << s << '\n';
+#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
+#define ts(n) to_string(n)
 
 void solve(){
     ll n, m;
     cin >> n;
-    str s;
-    cin >> s;
 
-    int nm = 0;
-    int ret = 0;
+    vll va(n,0);
+    vll vb(n,0);
+
+    ll amin = 0;
+    ll bmin = 0;
     for (int i=0; i<n; i++){
-        if (s[i] == '('){
-            nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
-            }
-        }
+        int in;
+        cin >> in;
+        amin = min(amin,in) ;
+        va[i] = in;
     }
+    for (int i=0; i<n; i++){
+        int in;
+        cin >> in;
+        bmin = min(bmin,in) ;
+        vb[i] = in;
+    }
+
+    for (int i=0; i<n; i++){
+        int in;
+        cin >> in;
+        ret += v[i]>in ? v[i] : in;
+    }
+
     Out(ret);
+
+
 
 }
 

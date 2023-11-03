@@ -1,5 +1,5 @@
-//
-// unsolved
+// https://codeforces.com/problemset/problem/749/A
+// solved 10/22/23
 // comments:
 
 #include <bits/stdc++.h>
@@ -28,17 +28,41 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    if (n%2 == 0){
+        str ret = "2";
+        for (int i=1; i<n/2; i++){
+            ret += " 2";
+        }
+        Out((n)/2);
+        OutRet(ret);
+    }
+    else{
+        if (n==3) {
+            Out("1");
+            OutRet(n);
+        }
 
+        n -= 3;
+        str ret = "2";
+        for (int i=1; i<n/2; i++){
+            ret += " 2";
+        }
+        ret += " 3";
+        Out((n+2)/2);
+        OutRet(ret);
+
+    }
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

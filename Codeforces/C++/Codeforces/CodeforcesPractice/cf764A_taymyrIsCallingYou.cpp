@@ -1,5 +1,5 @@
-//
-// unsolved
+// https://codeforces.com/problemset/problem/764/A
+// solved 10/21/23
 // comments:
 
 #include <bits/stdc++.h>
@@ -27,18 +27,23 @@ using pii = pair<int, int>;
 #define ts(n) to_string(n)
 
 void solve(){
-    ll n, m;
-
+    ll n, m, z;
+    cin >> n >> m >> z;
+    ll ret = 0;
+    for (int i=1; i<=z; i++){
+       ret += (i%n==0 && i%m==0);
+    }
+    Out(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

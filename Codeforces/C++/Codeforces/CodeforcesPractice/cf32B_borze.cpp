@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/32/B
+//  solved 10/19/23
+// comments: just brute force
 
 #include <bits/stdc++.h>
 
@@ -28,6 +28,29 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    str s;
+    cin >> s;
+    str ret;
+    int k = 0;
+    for (int i=0; i<s.size(); i++){
+       if (s[i] == '.') {
+           if (k == 0){
+               ret += '0';
+           }
+           else {
+               ret += '1';
+               k = 0;
+           }
+       } else {
+           if (k == 1){
+               ret += '2';
+               k = 0;
+           } else {
+               k++;
+           }
+       }
+    }
+    Out(ret);
 
 
 }
@@ -35,10 +58,7 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
         solve();
-    }
 
     return 0;
 }

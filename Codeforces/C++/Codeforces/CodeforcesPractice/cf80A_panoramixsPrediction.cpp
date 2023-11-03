@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// https://codeforces.com/problemset/problem/80/A
+// solved 7/25/23
+// comments: !bool does not work
 
 #include <bits/stdc++.h>
 
@@ -21,39 +21,48 @@ using pii = pair<int, int>;
 
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
-#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
-#define Out(s)  cout << s << '\n';
+#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
+#define ts(n) to_string(n)
 
 void solve(){
     ll n, m;
-    cin >> n;
-    str s;
-    cin >> s;
+    cin >> n >> m;
 
-    int nm = 0;
-    int ret = 0;
-    for (int i=0; i<n; i++){
-        if (s[i] == '('){
-            nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
+    for (int i=n+1; i<m; i++){
+        bool isPrime = true;
+        for (int j=2; j<= floor(sqrt(i)+1); j++){
+            if (i%j == 0) {
+                isPrime = !isPrime;
+                break;
             }
         }
+        if (isPrime){
+            OutRet("NO");
+        }
     }
-    Out(ret);
+    bool isPrime = true;
+    for (int j=2; j<= floor(sqrt(m)+1); j++){
+        if (m%j == 0) {
+            isPrime = !isPrime;
+            break;
+        }
+    }
+    if (isPrime){
+        OutRet("YES");
 
+    }
+    Out("NO");
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/41/A
+// solved 10/15/23
+// comments: need to get back into the swing of things
 
 #include <bits/stdc++.h>
 
@@ -27,18 +27,24 @@ using pii = pair<int, int>;
 #define ts(n) to_string(n)
 
 void solve(){
-    ll n, m;
+    str s,c,r;
+    cin >> s >> c;
+    ll N = s.length();
+    r = "";
 
-
+    for (int i=0; i<N; i++){
+        r = s[i] + r;
+    }
+    Out((c==r)?"YES":"NO");
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

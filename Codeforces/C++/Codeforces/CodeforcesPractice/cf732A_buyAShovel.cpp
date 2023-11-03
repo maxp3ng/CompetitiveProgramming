@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/732/A
+// solved 10/23/23
+// comments: cpp string needs more practice
 
 #include <bits/stdc++.h>
 
@@ -28,6 +28,17 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n >> m;
+    ll a = n;
+    ll ret = 1;
+    str s = to_string(n);
+    while (!(s[s.size()-1] == to_string(m)[0])){
+        if (s[s.size()-1] == '0'){ OutRet(ret);}
+        n += a;
+        ret++;
+        s = to_string(n);
+    }
+    OutRet(ret);
 
 
 }
@@ -35,10 +46,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/34/A
+// solved 10/15/23
+// comments: abs(), to_string(), edgecases
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,36 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    ll min = MXN-1;
+    ll minIndex = 0;
+    ll prev;
+    cin >> prev;
+    ll first ;
+    first = prev;
+    ll curr;
+    for (int i=1; i<n; i++){
+        cin >> curr;
+        if (abs(curr-prev) < min){
+            min = abs(curr-prev);
+            minIndex = i;
+        }
+        prev = curr;
+    }
+    if (abs(first-curr) <= min){
+        OutRet("1 " + to_string(n));
+    }
 
-
+    Out(to_string(minIndex) + " " + to_string(minIndex+1));
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

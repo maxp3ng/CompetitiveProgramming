@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/723/A
+// solved 10/28/23
+// comments: think then brute force
 
 #include <bits/stdc++.h>
 
@@ -27,7 +27,32 @@ using pii = pair<int, int>;
 #define ts(n) to_string(n)
 
 void solve(){
-    ll n, m;
+    ll a, b, c;
+    cin >> a >> b >> c;
+    ll mid = 0;
+    if (a < b )  {
+        if ( b < c){
+            mid = b;
+        }
+        else {
+            if ( c < a){ mid = a;}
+            else {mid = c;}
+        }
+    } else {
+        if (a > c){
+            if (c > b){
+                mid = c;
+            }
+            else {mid = b;}
+        } else {
+            mid = a;
+        }
+    }
+    ll ret = 0;
+    ret += abs(mid - a);
+    ret += abs(mid - b);
+    ret += abs(mid - c);
+    Out(ret);
 
 
 }
@@ -35,10 +60,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// https://cses.fi/problemset/task/1083
+//  sikved 7/27/23
+// comments: n-1
 
 #include <bits/stdc++.h>
 
@@ -21,39 +21,29 @@ using pii = pair<int, int>;
 
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
-#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
-#define Out(s)  cout << s << '\n';
+#define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
+#define ts(n) to_string(n)
 
 void solve(){
-    ll n, m;
+    ll n;
     cin >> n;
-    str s;
-    cin >> s;
 
-    int nm = 0;
-    int ret = 0;
-    for (int i=0; i<n; i++){
-        if (s[i] == '('){
-            nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
-            }
-        }
+    ll sum = 0;
+    for (int i=1; i<n; i++){
+        ll in;
+        cin >> in;
+        sum += in;
     }
-    Out(ret);
+    cout << ((n*(n+1))/2)-sum;
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
-        solve();
-    }
+    solve();
 
     return 0;
 }

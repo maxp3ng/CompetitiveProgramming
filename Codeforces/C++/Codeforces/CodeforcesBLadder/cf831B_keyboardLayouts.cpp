@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/831/B
+// solved 11/2/23
+// comments: new ladder!
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,33 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    str a, b, c;
+    cin >> a >> b >> c;
 
+    str ret = "";
+    for (int i=0; i<c.size(); i++){
+        if (a.find(tolower(c[i])) == string::npos) {
+            ret += c[i];
+            continue;
+        }
+        ll index = a.find(tolower(c[i]));
+        if (!isupper(c[i])){
+            ret += (b[index]);
+        } else {
+            ret += toupper(b[index]);
+        }
+    }
+    Out(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

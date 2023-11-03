@@ -1,4 +1,4 @@
-//
+// https://codeforces.com/problemset/problem/1374/B
 // unsolved
 // comments:
 
@@ -22,15 +22,18 @@ using pii = pair<int, int>;
 #define Rep(i, x, y)   for (__typeof(x) i=x; i < y; i++)
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
 #define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl
-#define Out(s)  cout << (s) << '\n'
-#define OutRet(s)  cout << (s) << '\n'; return
+#define Out(s)  cout << s << '\n'
+#define OutRet(s)  cout << s << '\n'; return
 #define ts(n) to_string(n)
 
 void solve(){
     ll n, m;
 
 
+
 }
+
+
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);

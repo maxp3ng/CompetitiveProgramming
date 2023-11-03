@@ -1,6 +1,6 @@
-// https://codeforces.com/problemset/problem/1374/C
-//  solved 7/25
-// comments: understanding the problem throughly -> instant solve -> reading carefully is KEY
+// https://codeforces.com/problemset/problem/110/A
+//  solved 7/25/23
+// comments: none
 
 #include <bits/stdc++.h>
 
@@ -23,37 +23,37 @@ using pii = pair<int, int>;
 #define Repi(i, x, y)  for (__typeof(x) i=x; i > y; i--)
 #define vOut(v) Rep(i,0,v.size()){cout << v[i] << " ";} cout << endl;
 #define Out(s)  cout << s << '\n';
+#define OutRet(s)  cout << s << '\n'; return;
 
 void solve(){
     ll n, m;
-    cin >> n;
     str s;
     cin >> s;
 
     int nm = 0;
-    int ret = 0;
-    for (int i=0; i<n; i++){
-        if (s[i] == '('){
+    for (int i=0; i<s.size(); i++){
+        if (s[i] == '4' || s[i] == '7'){
             nm++;
-        }else { // )
-            if(nm == 0){
-                ret++;
-            } else {
-                nm--;
-            }
         }
     }
-    Out(ret);
-
+    str nms = to_string(nm) ;
+    int ret = 0;
+    for (int i=0; i<nms.size(); i++){
+        if (nms[i] == '4' || nms[i] == '7'){
+            ret++;
+        }
+    }
+    str re = (ret==nms.size())?"YES" : "NO";
+    Out(re);
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

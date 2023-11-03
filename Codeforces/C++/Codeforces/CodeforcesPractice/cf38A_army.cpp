@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/38/A
+// solved 10/15/23
+// comments: read problem more closely
 
 #include <bits/stdc++.h>
 
@@ -28,6 +28,20 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    ll arr[n-1] = {};
+    for (int i=0; i<n-1; i++){
+        int t;
+        cin >> t;
+        arr[i] = t;
+    }
+    ll a, b;
+    cin >> a >> b;
+    ll ret = 0;
+    for (int i=a-1; i<b-1; i++){
+       ret += arr[i];
+    }
+    Out(ret);
 
 
 }
@@ -35,10 +49,10 @@ void solve(){
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }
