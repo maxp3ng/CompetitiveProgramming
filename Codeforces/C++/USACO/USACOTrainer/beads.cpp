@@ -34,30 +34,57 @@ using pii = pair<int, int>;
 #define ts(n) to_string(n)
 
 int main() {
-    ofstream fout ("beads.out");
+    ofstream fout ("./beads.out");
     ifstream fin ("beads.in");
     ll N;
     str s;
-    fin >> N;
-    fin >> s;
+    cin >> N;
+    cin >> s;
 
+    char color1 = 'b';
+    char color2 = 'r';
+    //red then blue
     s = s+s;
-    ll ret = 0;
-    ll lastWhiteStart, chain, lastChain;
-    lastWhiteStart = chain = lastChain = 0;
-    char lastChar = 'X';
+    ll mx = 0;
+    ll chain = 0;
+    ll lastColorEnd = -1;
+    bool firstColor = true;
 
-    for (int i = 0; i<N*2; i++){
-        char curr = s[i];
-        if (curr == 'X'){
-
-        } else if (curr == 'w'){
-
+    ll first = true;
+    str temp = "";
+    for (int i=0; i<N; i++){
+        if (firstColor){
+            if (s[i] == color1){
+            } if (s[i] == 'w' && lastColorEnd != i-1 && !first){
+                lastColorEnd = i;
+            } else {
+                firstColor = false;
+            }
+            chain++;
+            temp+=s[i];
+        } else { //secondColor
+           if (s[i] == color2) {
+               if(s[i-1] == color1){
+                   lastColorEnd=i;
+               }
+               chain++;
+               temp+=s[i];
+           } else if (s[i] == 'w'){
+               chain++;
+               temp+=s[i];
+           } else { // first color: tested segment done
+               mx = max(chain, mx);
+               swap(color1, color2);
+               if (first) {
+                   lastColorEnd = i-1;
+                   first = false;
+               }
+               i = lastColorEnd;
+               chain = 0;
+               temp += '|';
+           }
         }
-    }
+   }
 
-
-
-    Out(ret);
-
+    cout << mx;
 }

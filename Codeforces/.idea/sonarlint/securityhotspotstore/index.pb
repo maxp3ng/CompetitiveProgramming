@@ -7,3 +7,37 @@ k
 ;C++/Codeforces/CodeforcesBLadder/cf831B_keyboardLayouts.cpp,7\5\75a241efd2f017680c54bdc8be047640ec13ab10
 d
 4C++/Codeforces/CodeforcesBLadder/cf746B_decoding.cpp,c\f\cf49ac3ff8bbaab426528ba98417bc837928827a
+j
+:C++/Codeforces/CodeforcesBLadder/cf967B_wateringSystem.cpp,9\b\9b04701cd305b008531ceca2db04c4279538188c
+r
+BC++/Codeforces/CodeforcesBLadder/cf1204B_misloveHasLostanArray.cpp,c\b\cbeadb41046a949a2b100cf94ab66c349c3f40bb
+g
+7C++/Codeforces/CodeforcesBLadder/cf805B_3Palindrome.cpp,4\d\4d4c944a5dcc3de92f20981b3d3c3ff83d732877
+n
+>C++/Codeforces/CodeforcesBLadder/cf1230B_aniaAndMinimizing.cpp,d\c\dc5cf068777945c8f0dcdf7eabdec360a5d17689
+k
+;C++/Codeforces/CodeforcesBLadder/cf935B_fafaAndTheGates.cpp,2\6\268b02e3ab1084815046461477e3095911f1fb1a
+k
+;C++/Codeforces/CodeforcesBLadder/cf764B_timofeyAndCubes.cpp,4\a\4aa1a03f6c722ef12063a2671eeac0c21db7fc48
+i
+9C++/Codeforces/CodeforcesBLadder/cf1041B_buyingATvSet.cpp,8\a\8a8e3c696a42e77f77bc1aff599738f86a16c6b0
+c
+3C++/Codeforces/CodeforcesBLadder/cf1214B_badges.cpp,2\f\2fae162e133e7d632eb081c95494bf0f55f8975b
+m
+=C++/Codeforces/CodeforcesBLadder/cf834B_theFestiveEvening.cpp,d\5\d50ebd8f21457b00216ba483a7c2fceb5947b3fe
+n
+>C++/Codeforces/CodeforcesPractice/cf867A_betweenTheOffices.cpp,4\e\4ec0f4259aa1f745c658e0f879a802305f3dcdb4
+P
+ C++/USACO/USACOTrainer/beads.cpp,c\7\c72113e786d791531d636f230fbc20ec6db2363a
+O
+C++/USACO/USACOTrainer/beads.in,f\c\fc7973daf6480e68c6bfc90180ced5013a9870e4
+Q
+!C++/USACO/USACOTrainer/friday.cpp,e\1\e1ad42f6dafd5a011af09caf06f2144981df2b2c
+9
+	beads.out,3\b\3be702e921db82ef62173ba9ecce971903c3f82b
+P
+ C++/USACO/USACOTrainer/beads.out,c\d\cd69d50a5a40e89d47445841c8e03569c1a3891e
+Q
+!C++/USACO/USACOTrainer/friday.out,3\6\36c41493d6ac84fe754cad25d8a990dbb670d365
+p
+@C++/Codeforces/CodeforcesBLadder/cf1038B_nonCoprimePartition.cpp,9\3\93a906d3ab27619a060b79a0e69a4f3f0f2d6f1a

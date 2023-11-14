@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/867/A
+// solved 11/12/23
+// comments: record time!
 
 #include <bits/stdc++.h>
 
@@ -28,17 +28,29 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    str s;
+    cin >> s;
 
-
+    ll ret =0;
+    for (int i=0; i<n-1; i++){
+        if (s[i] == 'F' && s[i+1] == 'S'){
+            ret--;
+        }
+        if (s[i] == 'S' && s[i+1] == 'F'){
+            ret++;
+        }
+    }
+    OutRet(ret>0?"YES":"NO");
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

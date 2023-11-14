@@ -1,5 +1,5 @@
-//
-// unsolved
+// https://codeforces.com/problemset/problem/935/B
+// solved 11/8/23
 // comments:
 
 #include <bits/stdc++.h>
@@ -13,7 +13,7 @@ using vll = vector<ll>;
 using vi = vector<int>;
 using pii = pair<int, int>;
 
-#define endl "\n";t
+#define endl "\n";
 #define F first
 #define S second
 #define pb push_back
@@ -28,17 +28,39 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    str s;
+    cin >> n;
+    cin >> s;
 
+    ll RminusU = 0;
+    bool onWall = false; // start on wall, so when you leave no change
+    ll ret = 0;
+    for (int i=0; i<n-1; i++){
+        char c = s[i];
+        if (c == 'R'){
+            RminusU++;
+        } else {
+            RminusU--;
+        }
+        if (RminusU == 0){
+            if (c == 'R' && s[i+1] == 'R'){
+                ret++;
+            } else if (c == 'U' && s[i+1] == 'U'){
+                ret++;
+            }
+        }
+    }
+    OutRet(ret);
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

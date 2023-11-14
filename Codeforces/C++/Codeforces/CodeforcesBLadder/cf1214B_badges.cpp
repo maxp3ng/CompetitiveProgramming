@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/1214/B
+// solved 11/11/23
+// comments: think through on paper/mind! long solutions = you're doing something wrong
 
 #include <bits/stdc++.h>
 
@@ -27,18 +27,28 @@ using pii = pair<int, int>;
 #define ts(n) to_string(n)
 
 void solve(){
-    ll n, m;
+    ll b, g, n;
+    cin >> b >> g >> n;
 
+    b = min(b,n);
+    g = min(g,n); // keeping in range (first test case)
+
+    OutRet(b - (n-g) + 1);
+
+    // test case 2:
+//    0 1 2 3 4 5   blue is 5
+//    5 4 3 2 1 0   red is 3 (which is acc index of 2)
+// index 5 - index 2 +1 (for inclusive) is 4
 
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }

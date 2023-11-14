@@ -1,6 +1,6 @@
-//
-// unsolved
-// comments:
+// https://codeforces.com/problemset/problem/805/B
+// solved 11/5/23
+// comments: unbelievably easy once you get it -> think problems through!
 
 #include <bits/stdc++.h>
 
@@ -13,7 +13,7 @@ using vll = vector<ll>;
 using vi = vector<int>;
 using pii = pair<int, int>;
 
-#define endl "\n";t
+#define endl "\n";
 #define F first
 #define S second
 #define pb push_back
@@ -28,17 +28,26 @@ using pii = pair<int, int>;
 
 void solve(){
     ll n, m;
+    cin >> n;
+    str s = "";
 
-
+    for (int i=0; i<n; i++){
+        if ((i/2)%2==0){
+           s += 'a';
+        } else {
+            s += 'b';
+        }
+    }
+    Out(s);
 }
 
 int main(){
     ios::sync_with_stdio(0);cin.tie(0); cout.tie(0);
 
-    ll T = 1; cin >> T;
-    while(T --){
+//    ll T = 1; cin >> T;
+//    while(T --){
         solve();
-    }
+//    }
 
     return 0;
 }
